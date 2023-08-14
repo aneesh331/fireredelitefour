@@ -45,7 +45,7 @@
                 In other words, all strongest possible obtainable evolution lines before the Elite Four.</p><br />
                 <p id="image"><a href="https://www.reddit.com/r/PokemonRMXP/comments/gh1vyi/gen_2_style_kanto_update_i_revamped_the_kanto/"><img src="images/starters.png"/></a></p><br />
                 <p id="download">The ALGORITHM</p><br />
-                <p>There are two balancing <font color="#cd5241">algorithms</font> I've implemented to make sure every random team has a fighting chance at the challenge</p><br/>
+                <p>There are two balancing <font color="#cd5241">algorithms</font> I've implemented to make sure every random team has a fighting chance at the challenge.</p><br/>
                 <p>1. For every instance of a Pokémon <font color="#cd5241">type</font> t on your team, the probability of again getting a Pokémon of type t is reduced.</p><br/>
                 <p>2. The probability of getting two successive Pokémon of either both sub-median or both above-median <font color="#cd5241">base stat total</font> (BST) is lower than otherwise.</p><br/>
                 <p id="image"><img src="images/digram.png"/></p>
@@ -59,10 +59,10 @@
                 <div id="twoimage"><img src="images/randbsts.png"></img><img src="images/balancebsts.png"></img></div><br/>
                 <p>Since my BST balancing algorithm centers around the median, naturally the average BST of your team will be almost the same as a randomly
                     generated team. This mean of 478, sensibly, is right in between the mean of 475 and median of 485. 
-                    But, the <font color="#cd5241">standard deviation</font> is almost 18% lower, meaning you probably won't get a team with Gyarados, Dragonite, and Charizard all together. Sorry!
+                    But the <font color="#cd5241">standard deviation</font> is almost 18% lower, meaning you probably won't get a team with Gyarados, Dragonite, and Charizard all together. Sorry!
                 </p><br/>
                 <p id="download">What about my Pokémon's STATS?</p><br />
-                <p>All IVs and Natures are pure randomized. EVs are set to 0 and experience gain is disabled 😈.</p><br/>
+                <p>All IVs and Natures are purely randomized. EVs are set to 0 and experience gain is disabled 😈.</p><br/>
                 <br/><br/>
                 <p id="important">Their MOVES</p><br />
                 <p>The selection pool of possible moves for each of your Pokémon include their entire level-up, TMHM, and tutor <font color="#cd5241">learnsets</font>.</p><br/>
@@ -75,7 +75,7 @@
                 <p id="download">The RESULTS</p><br />
                 <div id="twoimage"><img src="images/randmoves.png"></img><img src="images/balancemoves.png"></img></div><br/>
                 <p>Note that balancing the movesets with the reroll factor slightly eliminates some of the probabalistic biases that stem from the nature of a Pokémon's learnset's being predominantly non-STAB, TMHM, status moves.
-                    Although I could modify the reroll factors more precisely, factors too high will result in diminished performance as my code is built on <font color="#cd5241">recursion</font>.
+                    Although I would be able to modify the reroll factors for better results, factors too high will result in diminished performance as my code is built on <font color="#cd5241">recursion</font>.
                 </p><br/>
                 <div id="twoimage"><img src="images/teammovesrandom.png"></img><img src="images/teammovesbalance.png"></img></div><br/>
                 <p>The same team; on the left with randomly generated moves, and on the right with algorithmically generated moves.</p><br/><br/>
@@ -95,9 +95,9 @@
                 <p id="important">My CODE</p><br />
                 <p>In case you were wondering, which is likely by the fact that you scrolled down this far, here's a brief description of how I programmed this game.</p><br/>
                 <p>I implemented the above algorithms for Pokémon and move generation in a series of encapsulating <font color="#cd5241">C</font> getters, setters, and recursive generators which encapsulate into one function that I injected into this <font color="#cd5241">Cooltrainer's</font> event script.</p><br/>
+                <div id="twoimage"><img src="images/pokefirered-0.png"></img><img src="images/pokefirered-2.png"></img><img src="images/pokefirered-1.png"></img></div><br/>
                 <p>But, of course, data creation and parsing was done in <font color="#cd5241">Python</font>.</p><br/>
                 <p>Finally, a special thanks again to pret for decompilation, and <a href="https://www.youtube.com/@TeamAquasHideout">Team Aqua's Hideout</a> for help.</p><br/>
-                <div id="twoimage"><img src="images/pokefirered-0.png"></img><img src="images/pokefirered-2.png"></img><img src="images/pokefirered-1.png"></img></div><br/>
                 <p>Here's that function I was referring to. If you're interested in viewing more, click <a href="https://github.com/AneeshBonthala/firerede4/blob/master/src/_create_team.c">here</a> to view source, or at the Github repo link at the top of the page. Note that these aren't close to the only changes I made to the ROM.</p><br/>
                 <p id="image"><img src="images/code.png"/></p><br/>
                 <p id="important">Thank YOU and please ENJOY!</p><br />
