@@ -45,11 +45,11 @@
                 In other words, all strongest possible obtainable evolution lines before the Elite Four.</p><br />
                 <p id="image"><a href="https://www.reddit.com/r/PokemonRMXP/comments/gh1vyi/gen_2_style_kanto_update_i_revamped_the_kanto/"><img src="images/starters.png"/></a></p><br />
                 <p id="download">The ALGORITHM</p><br />
-                <p>There are two balancing <font color="#cd5241">algorithms</font> I've implemented to make sure every random team has a fighting chance at the challenge.</p><br/>
+                <p>I've implemented a balancing <font color="#cd5241">algorithm</font> to make sure every random team has a fighting chance at the challenge.</p><br/>
                 <p>1. For every instance of a Pokémon <font color="#cd5241">type</font> t on your team, the probability of again getting a Pokémon of type t is reduced.</p><br/>
                 <p>2. The probability of getting two successive Pokémon of either both sub-median or both above-median <font color="#cd5241">base stat total</font> (BST) is lower than otherwise.</p><br/>
                 <p id="image"><img src="images/digram.png"/></p>
-                <p>Note that there may be more than two types in common for the third, fourth, fifth, and sixth Pokémon. Also, a pure type counts as two of its typing.
+                <p>Note that there may be more than two types in common among your team for the third, fourth, fifth, and sixth Pokémon. Also, a pure type counts as two of its typing.
                     So, the probability of keeping a third pure water type, BSTs aside, is 1/5.
                 </p><br/>
                 <p id="download">The DIFFERENCE</p><br />
@@ -58,7 +58,7 @@
                     It also reduces the standard deviation by almost 20%. Now, you won't have all those pesky poison types all on one team.</p><br/><br/>
                 <div id="twoimage"><img src="images/randbsts.png"></img><img src="images/balancebsts.png"></img></div><br/>
                 <p>Since my BST balancing algorithm centers around the median, naturally the average BST of your team will be almost the same as a randomly
-                    generated team. This mean of 478, sensibly, is right in between the mean of 475 and median of 485. 
+                    generated team. This average of 478, sensibly, is right in between the overall mean of 475 and median of 485. 
                     But the <font color="#cd5241">standard deviation</font> is almost 18% lower, meaning you probably won't get a team with Gyarados, Dragonite, and Charizard all together. Sorry!
                 </p><br/>
                 <p id="download">What about my Pokémon's STATS?</p><br />
@@ -67,7 +67,7 @@
                 <p id="important">Their MOVES</p><br />
                 <p>The selection pool of possible moves for each of your Pokémon include their entire level-up, TMHM, and tutor <font color="#cd5241">learnsets</font>.</p><br/>
                 <p>I wanted to include some reroll factors as well in order to hopefully give your Pokémon a more balanced moveset. However, this one's way more up to chance.</p><br/>
-                <p>There are three factors I rolled on as you can see in the figure below.</p><br/>
+                <p>There are four characteristics I rolled on as you can see in the figure below.</p><br/>
                 <p id="image"><img src="images/movedigram.png"/></p><br/>
                 <p>These particular reroll incrementers were the product of much tweaking in order to reliably form results close enough to the samples below. 
                     'Strong' moves are the top seven moves in the Pokémon's learnset with the highest expected damage values (power times accuracy).
@@ -88,6 +88,8 @@
                 <div id="spriteimage"><img src="images/itemsprites/full-restore.png"></img><p>&ensp;2 full restores; use them wisely!</p></div>
                 <div id="spriteimage"><img src="images/itemsprites/ether.png"></img><p>&ensp;1 ether</p></div>
                 <div id="spriteimage"><img src="images/itemsprites/elixir.png"></img><p>&ensp;1 elixir</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/full-heal.png"></img><p>&ensp;5 full heals</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/x-attack.png"></img><p>&ensp;2 random battle items</p></div>
                 <div id="spriteimage"><img src="images/itemsprites/pp-up.png"></img><p>&ensp;1-4 pp ups at random</p></div>
                 <div id="spriteimage"><img src="images/itemsprites/pp-max.png"></img><p>&ensp;25% chance to get 1 pp max</p></div>
                 <div id="spriteimage"><img src="images/itemsprites/leftovers.png"></img><p>&ensp;2-5 random held items</p></div>
