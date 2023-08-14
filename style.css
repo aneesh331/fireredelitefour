@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    color: #cd5241;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px #cd5241;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cd5241;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: 'Social Media Circled';
+    src: url('fonts/Social Media Circled.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Westwood Sans';
+    src: url('fonts/WestwoodSans-Regular.ttf') format('truetype');
+}
+
+/* UNIVERSAL */
+
+#header {
+    height: 105px;
+    width: 100%;
+    position: fixed;
+    background-image: url("images/header.png")
+}
+
+#header-elements {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+}
+
+#header p {
+    font-family: 'Handjet', sans-serif;
+    color: #cd5241;
+    
+}
+
+#title {
+    font-size: 80px;
+}
+
+#header img {
+    height: 80px;
+    
+}
+
+#footer {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-image: url("images/footer.png")
+
+}
+
+#footer-elements {
+    height: 50px;
+    width: 250px;
+    display: flex;
+    margin: auto auto;
+}
+
+#socials {
+    font-family: 'Social Media Circled';
+    color: #cd5241;
+    margin: auto auto;
+    display: flex;
+    font-size: 25px;
+}
+
+#one {
+    margin-right: 12px;
+}
+
+#two {
+    margin-right: 12px;
+}
+
+#main {
+    position: absolute;
+    top: 95px;
+    bottom: 50px;
+    height: auto;
+    width: 100%;
+    overflow: auto;
+    background-color: #BEE4F7;
+}
+
+#main-container {
+    position: relative;
+    width: 50%;
+    margin: auto;
+    background-color: #BEE4F7;
+}
+
+#main-text {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    color: dimgray;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#important {
+    font-family: 'Handjet', sans-serif;
+    font-size: 30px;
+    color: #cd5241;
+}
+
+#download {
+    font-family: 'Handjet', sans-serif;
+    font-size: 21px;
+    color: #cd5241;
+}
+
+#image {
+    text-align: center;
+}
+
+#twoimage {
+    display: flex;
+    justify-content: center;
+    /* border-style: solid;
+    border-color: black; */
+}
+
+#spriteimage {
+    display: flex;
+    justify-content: left;
+    height: 30px;
+    bottom: 0;
+    font-size: 15px;
+}

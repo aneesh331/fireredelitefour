@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/tilogo.png" alt="logo" />
+    <title>ticalceducation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <div id="header-elements">
+            <img src="images/zard.gif" />
+            <p id="title">Pokemon FireRed E4 Challenge</p>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="main-container">
+            <div id="main-text">
+                <p id="important">Welcome to the ELITE FOUR!</p><br />
+                <p>As all us Pokémon fans know, the most fun and challenging part of a nuzlocke or even standard run of the game is the Elite Four.</p><br />
+                <p>So, I decided to make a <font color="#cd5241">Pokémon FireRed Elite Four</font> nuzlocke simulator in the form of a fully functional ROM Hack!</p><br />
+                <p>Many thanks to the decompilation team at <a href="https://github.com/pret">pret</a> for making this project possible.</p><br />
+                <p id="download"><strong><a href="help.html">Take me to the GITHUB Repo!</a></strong></p>
+                <br/><br/>
+                
+                <p id="important">Becoming the CHAMPION</p><br />
+                <p>As the challenger, you will face the <font color="#cd5241">Kanto</font> elite four as usual. But this time around, it won't be as easy.</p><br />
+                <p>You are given a psuedo-random team of <font color="#cd5241">six Pokémon</font> at Level 55, also with randomized moves, and a limited bag of items and TMs.</p><br />
+                <p>However, if any of your Pokémon <font color="#cd5241">faint</font> during the challenge, you will have no opportunity to revive them until you reattempt the challenge from the start.</p><br />
+                <p>If you are able to overcome these adversities, then you truly do earn the honor of being Kanto <font color="#cd5241">Champion</font>.</p><br />
+                <br/><br/>
+                
+                <p id="important">The POKéMON</p><br />
+                <p>The selection pool of possible Pokémon for your team include all <font color="#cd5241">79 fully evolved species</font> from the Kanto region as well as the legendary birds. 
+                In other words, all strongest possible obtainable evolution lines before the Elite Four.</p><br />
+                <p id="image"><a href="https://www.reddit.com/r/PokemonRMXP/comments/gh1vyi/gen_2_style_kanto_update_i_revamped_the_kanto/"><img src="images/starters.png"/></a></p><br />
+                <p id="download">The ALGORITHM</p><br />
+                <p>There are two balancing <font color="#cd5241">algorithms</font> I've implemented to make sure every random team has a fighting chance at the challenge</p><br/>
+                <p>1. For every instance of a Pokémon <font color="#cd5241">type</font> t on your team, the probability of again getting a Pokémon of type t is reduced.</p><br/>
+                <p>2. The probability of getting two successive Pokémon of either both sub-median or both above-median <font color="#cd5241">base stat total</font> (BST) is lower than otherwise.</p><br/>
+                <p id="image"><img src="images/digram.png"/></p>
+                <p>Note that there may be more than two types in common for the third, fourth, fifth, and sixth Pokémon. Also, a pure type counts as two of its typing.
+                    So, the probability of keeping a third pure water type, BSTs aside, is 1/5.
+                </p><br/>
+                <p id="download">The DIFFERENCE</p><br />
+                <div id="twoimage"><img src="images/randtypes.png"></img><img src="images/balancetypes.png"></img></div><br/>
+                <p>As you can see, the average number of duplicate types generated with my algorithm is near <font color="#cd5241">halved</font>.
+                    It also reduces the standard deviation by almost 20%. Now, you won't have all those pesky poison types all on one team.</p><br/><br/>
+                <div id="twoimage"><img src="images/randbsts.png"></img><img src="images/balancebsts.png"></img></div><br/>
+                <p>Since my BST balancing algorithm centers around the median, naturally the average BST of your team will be almost the same as a randomly
+                    generated team. This mean of 478, sensibly, is right in between the mean of 475 and median of 485. 
+                    But, the <font color="#cd5241">standard deviation</font> is almost 18% lower, meaning you probably won't get a team with Gyarados, Dragonite, and Charizard all together. Sorry!
+                </p><br/>
+                <p id="download">What about my Pokémon's STATS?</p><br />
+                <p>All IVs and Natures are pure randomized. EVs are set to 0 and experience gain is disabled 😈.</p><br/>
+                <br/><br/>
+                <p id="important">Their MOVES</p><br />
+                <p>The selection pool of possible moves for each of your Pokémon include their entire level-up, TMHM, and tutor <font color="#cd5241">learnsets</font>.</p><br/>
+                <p>I wanted to include some reroll factors as well in order to hopefully give your Pokémon a more balanced moveset. However, this one's way more up to chance.</p><br/>
+                <p>There are three factors I rolled on as you can see in the figure below.</p><br/>
+                <p id="image"><img src="images/movedigram.png"/></p><br/>
+                <p>These particular reroll incrementers were the product of much tweaking in order to reliably form results close enough to the samples below. 
+                    'Strong' moves are the top seven moves in the Pokémon's learnset with the highest expected damage values (power times accuracy).
+                </p><br/>
+                <p id="download">The RESULTS</p><br />
+                <div id="twoimage"><img src="images/randmoves.png"></img><img src="images/balancemoves.png"></img></div><br/>
+                <p>Note that balancing the movesets with the reroll factor slightly eliminates some of the probabalistic biases that stem from the nature of a Pokémon's learnset's being predominantly non-STAB, TMHM, status moves.
+                    Although I could modify the reroll factors more precisely, factors too high will result in diminished performance as my code is built on <font color="#cd5241">recursion</font>.
+                </p><br/>
+                <div id="twoimage"><img src="images/teammovesrandom.png"></img><img src="images/teammovesbalance.png"></img></div><br/>
+                <p>The same team; on the left with randomly generated moves, and on the right with algorithmically generated moves.</p><br/><br/>
+                <p id="important">Your BAG</p><br />
+                <p>You are provided with:</p><br/>
+                <div id="spriteimage"><img src="images/itemsprites/potion.png"></img><p>&ensp;15 potions</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/super-potion.png"></img><p>&ensp;12 super potions</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/hyper-potion.png"></img><p>&ensp;10 hyper potions</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/max-potion.png"></img><p>&ensp;3 max potions</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/full-restore.png"></img><p>&ensp;2 full restores; use them wisely!</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/ether.png"></img><p>&ensp;1 ether</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/elixir.png"></img><p>&ensp;1 elixir</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/pp-up.png"></img><p>&ensp;1-4 pp ups at random</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/pp-max.png"></img><p>&ensp;25% chance to get 1 pp max</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/leftovers.png"></img><p>&ensp;2-5 random held items</p></div>
+                <div id="spriteimage"><img src="images/itemsprites/normal.png"></img><p>&ensp;10 random TMs</p></div><br/><br/>
+                <p id="important">My CODE</p><br />
+                <p>In case you were wondering, which is likely by the fact that you scrolled down this far, here's a brief description of how I programmed this game.</p><br/>
+                <p>I implemented the above algorithms for Pokémon and move generation in a series of encapsulating <font color="#cd5241">C</font> getters, setters, and recursive generators which encapsulate into one function that I injected into this <font color="#cd5241">Cooltrainer's</font> event script.</p><br/>
+                <p>But, of course, data creation and parsing was done in <font color="#cd5241">Python</font>.</p><br/>
+                <p>Finally, a special thanks again to pret for decompilation, and <a href="https://www.youtube.com/@TeamAquasHideout">Team Aqua's Hideout</a> for help.</p><br/>
+                <div id="twoimage"><img src="images/pokefirered-0.png"></img><img src="images/pokefirered-2.png"></img><img src="images/pokefirered-1.png"></img></div><br/>
+                <p>Here's that function I was referring to. If you're interested in viewing more, click <a href="https://github.com/AneeshBonthala/firerede4/blob/master/src/_create_team.c">here</a> to view source, or at the Github repo link at the top of the page. Note that these aren't close to the only changes I made to the ROM.</p><br/>
+                <p id="image"><img src="images/code.png"/></p><br/>
+                <p id="important">Thank YOU and please ENJOY!</p><br />
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div id="footer-elements">
+            <div id="socials">
+                <p id="one"><a href="https://github.com/AneeshBonthala" target="_blank">)</a></p>
+                <p><a href="https://discordapp.com/users/459425651783630848/" target="_blank">Y</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
