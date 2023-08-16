@@ -150,3 +150,7 @@ a, a:visited, a:hover, a:active {
     bottom: 0;
     font-size: 15px;
 }
+
+#gap {
+    padding: 10px;
+}
