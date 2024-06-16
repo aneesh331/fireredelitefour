@@ -46,10 +46,7 @@
                 <p>I've implemented a balancing <font color="#cd5241">algorithm</font> to make sure every random team has a fighting chance at the challenge.</p><br/>
                 <p>1. For every instance of a Pokémon <font color="#cd5241">type</font> t on your team, the probability of again getting a Pokémon of type t is reduced.</p><br/>
                 <p>2. The probability of getting two successive Pokémon of either both sub-median or both above-median <font color="#cd5241">base stat total</font> (BST) is lower than otherwise. The median among these 79 Pokémon is 485.</p><br/>
-                <p id="image"><img src="images/digram.png"/></p>
-                <p>Note that there may be more than two types in common among your team for the third, fourth, fifth, and sixth Pokémon. Also, a pure type counts as two of its typing.
-                    So, the probability of keeping a third pure water type, BSTs aside, is 1/5.
-                </p><br/>
+                <p id="image"><img src="images/pokemon-algorithm.gv.png"/></p><br/><br/>
                 <p id="download">The DIFFERENCE</p><br />
                 <div id="twoimage"><img src="images/randtypes.png"></img><img src="images/balancetypes.png"></img></div><br/>
                 <p>As you can see, the average number of duplicate types generated with my algorithm is near <font color="#cd5241">halved</font>.
@@ -66,7 +63,7 @@
                 <p>The selection pool of possible moves for each of your Pokémon include their entire level-up, TMHM, and tutor <font color="#cd5241">learnsets</font>.</p><br/>
                 <p>I wanted to include some reroll factors as well in order to hopefully give your Pokémon a more balanced moveset. However, this one's way more up to chance.</p><br/>
                 <p>There are four characteristics I rolled on as you can see in the figure below.</p><br/>
-                <p id="image"><img src="images/movedigram.png"/></p><br/>
+                <p id="image"><img src="images/move_al.png"/></p><br/>
                 <p>These particular reroll incrementers were the product of much tweaking in order to reliably form results close enough to the samples below. 
                     '<font color="#cd5241">Strong</font>' moves are the top seven moves in the Pokémon's learnset with the highest expected damage values (power times accuracy).
                 </p><br/>
